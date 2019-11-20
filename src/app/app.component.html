@@ -1,0 +1,63 @@
+
+<!-- (click) or (ngSubmit)? -->
+<div class="card card-body mb-3">
+
+<form [formGroup]="form" (ngSubmit)="search()">
+      
+<h2>Search App</h2>
+
+
+
+<!-- <div class="form-control">  -->
+  
+<label> Username:</label>
+<div [formControl]="Username">
+<input type="text" 
+formControlName="Username" required>
+
+</div>
+<!-- [formControl]="searchControl">   -->
+<div class="validation"></div>
+<!-- </div> -->
+     
+<!-- <form [formGroup]="form" > -->
+<!-- <form> -->
+       
+<input type="checkbox"
+id="isChecked"
+formControlName="User">
+<!-- [checked]="data.isCompleted"
+[formControl]="isUserNamecheck"> -->
+<label for="isChecked" >User</label>
+<div class="validation"></div>
+
+<input type="checkbox" id="repos"
+formControlName="Reposotory">
+<!-- [formControl]="repos"> -->
+<label for="isChecked" >Reposotory</label>
+<div class="validation"></div>
+
+<input type="checkbox" id="followers"
+formControlName="Followers">
+<!-- [formControl]="followers"> -->
+<label for="isChecked" >Followers</label>
+<div class="validation"></div>
+
+<input type="checkbox" id="image"
+    formControlName="image">
+
+<label for="isChecked">Image</label> 
+<div class="validation">{{users.avatar_url}}</div>
+
+<!-- </div> -->
+  
+
+
+<!-- <div *ngIf="response">
+    <img src="{{response.image}}" alt=""/> -->
+<button class="button" type="submit" (ngSubmit)="search()"> Search</button>
+<!-- <button class="btn" type="submit" [disabled]="!profileForm.valid">Search</button> -->
+
+</form>
+
+</div>
